@@ -107,6 +107,9 @@
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.2"
   },
+  "files": [
+    "build/index.js"
+  ],
   "scripts": {
     "start": "node scripts/start.js",
     "build": "NODE_ENV=production rollup -c",
