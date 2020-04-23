@@ -3,11 +3,12 @@ import sass from "rollup-plugin-sass";
 import external from "rollup-plugin-peer-deps-external";
 import resolve from "rollup-plugin-node-resolve";
 import babel from 'rollup-plugin-babel';
+import autoExternal from 'rollup-plugin-auto-external';
 
 import pkg from "./package.json";
 
 export default {
-  input: "src/index.js",
+  input: "src/components/index.js",
   output: [
     {
       file: pkg.main,
@@ -29,8 +30,10 @@ export default {
     }),
     babel({
       exclude: 'node_modules/**',
-      presets: ['@babel/env', '@babel/preset-react']
+      presets: ['@babel/env', '@babel/preset-react'],
+      runtimeHelpers: true
     }),
+    autoExternal(),
     // commonjs({
     //   include: ["node_modules/**", "src/*"],
     //   exclude: ["**/*.stories.js"],
