@@ -35,7 +35,6 @@
     "file-loader": "4.3.0",
     "fs-extra": "^8.1.0",
     "html-webpack-plugin": "4.0.0-beta.11",
-    "husky": "^4.2.5",
     "identity-obj-proxy": "3.0.0",
     "jest": "24.9.0",
     "jest-environment-jsdom-fourteen": "1.0.1",
@@ -130,11 +129,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "git stash --keep-index --include-untracked && npm run build && echo 'done building 👍 😎' && git add --all && git stash pop"
-    }
   },
   "jest": {
     "roots": [
